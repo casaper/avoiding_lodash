@@ -1,8 +1,8 @@
 /**
  * Checks if value is an empty object or collection.
  */
-export const isEmpty = (obj?: any): boolean =>
+export const isEmpty = (value?: any): boolean =>
   Boolean(
-    [Object, Array].includes((obj || {}).constructor) &&
-      !Object.entries(obj || {}).length
+    [Object, Array].includes((value || {}).constructor) &&
+      !Object.entries(value || {}).length
   );
