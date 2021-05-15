@@ -1,4 +1,4 @@
-import { typedPropGet } from './utils';
+import { typedPropGet } from './typedPropGet';
 
 export const pick = <T, K extends keyof T>(object: T, ...picks: K[]): Pick<T, K> => {
   const result: Partial<T> = {};

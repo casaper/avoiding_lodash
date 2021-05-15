@@ -1,6 +1,6 @@
 import { flatten } from './flatten';
 import { uniq } from './uniq';
-import { pipe } from './utils';
+import { pipe } from './pipe';
 
 /**
  * Flattens an array and makes the result uniq
