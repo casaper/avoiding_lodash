@@ -1,6 +1,9 @@
 const notCorrectRecognizedTypes = ['Number', 'Object', 'Error'];
 
-const evaluateNumberType = (subject: any, strType: string): RealTypeTypes => {
+export const evaluateNumberType = (
+  subject: any,
+  strType: string
+): RealTypeTypes => {
   if (Number.isNaN(subject)) {
     return 'NaN';
   }
@@ -56,9 +59,16 @@ export const realType = (subject?: any): RealTypeTypes => {
     return evaluateNumberType(subject, strType);
   }
   if (strType === 'Error') {
-    return ([TypeError, EvalError, SyntaxError, URIError, RangeError, ReferenceError, Error].find(
-      (errType) => subject instanceof errType
-    )?.name || strType) as RealTypeTypes;
+    return ([
+      TypeError,
+      EvalError,
+      SyntaxError,
+      URIError,
+      RangeError,
+      ReferenceError,
+      Error,
+    ].find((errType) => subject instanceof errType)?.name ||
+      strType) as RealTypeTypes;
   }
   return strType as RealTypeTypes;
 };

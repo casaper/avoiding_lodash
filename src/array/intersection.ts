@@ -7,9 +7,8 @@
  *
  * @example
  * ```ts
- * intersection([1, 2, 3], [101, 2, 1, 10], [2, 1])
- * // => [1, 2]
+ * intersection([1, 2, 3], [101, 2, 1, 10], [2, 1]) // => [1, 2]
  * ```
  */
-export const intersection = (...arrays: any[][]): any[] =>
+export const intersection = <T>(...arrays: T[][]): T[] =>
   arrays.reduce((a, b) => a.filter((c) => b.includes(c)));
