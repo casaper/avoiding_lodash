@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["es2020", "dom"],
+    "module": "commonjs",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types", "./typings"]
+  },
+  "exclude": ["node_modules"]
+}
