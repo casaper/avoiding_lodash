@@ -7,7 +7,6 @@
  * @param number the subject
  * @param start optional the start of the range - defaults to 0
  * @param end the end of the range
- *
  * @example
  * ```ts
  * inRange(3, 10) // => true

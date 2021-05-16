@@ -2,8 +2,8 @@
 /**
  * Creates an array of elements split into groups the length of size.
  *
- * @param inputArray the array to make chunks from
- * @param size the size of the chunks
+ * @param inputArray - the array to make chunks from
+ * @param size - the size of the chunks
  * @example
  * ```ts
  * chunk(['a', 'b', 'c', 'd'], 2); // => [['a', 'b'], ['c', 'd']]

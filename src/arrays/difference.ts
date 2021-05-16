@@ -2,7 +2,8 @@
  * Creates an `array` of `array` values not included in the other given `arrays`.
  *
  * @param origin the origin to compare with
- * @param subjects one or more arrays to find differences
+ * @param subject one or more arrays to find differences
+ * @param {...any} subjects
  * @example
  * ```ts
  * difference([1, 2, 3, 4, 5], [5, 2, 10]) // output: [1, 3, 4]

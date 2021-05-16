@@ -3,10 +3,8 @@
  *
  * @param sourceArray the array to get elements added
  * @param elements
- *
  * @description
  * Use of this function mainly makes sense when used as part of a composed or piped function.
- *
  * @example
  * ```ts
  * concat([1], 2, 3); // => [1, 2, 3]
