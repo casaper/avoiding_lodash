@@ -1,9 +1,14 @@
 //  TODO: proper working generic type
+
+export class ChunkSizeError extends Error {}
+
 /**
  * Creates an array of elements split into groups the length of size.
  *
  * @param inputArray - the array to make chunks from
  * @param size - the size of the chunks
+ * @throws {@link ChunkSizeError}
+ * This exception is thrown when the size is less than 1.
  * @example
  * ```ts
  * chunk(['a', 'b', 'c', 'd'], 2); // => [['a', 'b'], ['c', 'd']]
@@ -12,7 +17,7 @@
  */
 export const chunk = (inputArray: any[], size: number): any[][] | never => {
   if (size < 1) {
-    throw new Error(`size must be >= 1, but it is "${size}"`);
+    throw new ChunkSizeError(`size must be >= 1, but it is "${size}"`);
   }
   return inputArray.reduce((collector: any[] = [], item, index: number) =>
     index % size === 0
