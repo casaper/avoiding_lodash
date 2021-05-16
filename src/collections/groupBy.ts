@@ -9,9 +9,9 @@ export const groupBy = <T>(
   arr: Record<string, any>[],
   property: string
 ): { [key: string]: T[] } =>
-  arr.reduce(
-    (prev, curr, _i, _a, groupKey = curr[property]) => (
-      (prev[groupKey] || (prev[groupKey] = [])).push(curr), prev
-    ),
-    {}
-  );
+    arr.reduce(
+      (prev, curr, _i, _a, groupKey = curr[property]) => (
+        (prev[groupKey] || (prev[groupKey] = [])).push(curr), prev
+      ),
+      {}
+    );

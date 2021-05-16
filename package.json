@@ -6,7 +6,6 @@
   "author": "Kaspar Vollenweider <vok@panter.ch>",
   "license": "MIT",
   "devDependencies": {
-    "@types/lodash": "^4.14.169",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/experimental-utils": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
@@ -24,10 +23,10 @@
     "jest-jasmine2": "^26.6.3",
     "jest-snapshot": "^26.6.2",
     "jest-when": "^3.3.1",
-    "lodash": "^4.17.21",
     "prettier": "^2.3.0",
     "prettier-plugin-sh": "^0.6.1",
     "ts-node": "^9.1.1",
-    "tslib": "^2.2.0"
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
   }
 }

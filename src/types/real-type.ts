@@ -27,6 +27,7 @@ export const evaluateNumberType = (
  *
  * For Example `typeof /^regex/` returns `'object'`. This will return `'regexp'`.
  *
+ * @param subject
  * @example
  * ```ts
  * realType() // => 'Undefined'
@@ -51,9 +52,11 @@ export const evaluateNumberType = (
  * ```
  */
 export const realType = (subject?: any): RealTypeTypes => {
-  const strType = Object.prototype.toString.call(subject).slice(8, -1);
+  const strType = Object.prototype.toString
+    .call(subject)
+    .slice(8, -1) as RealTypeTypes;
   if (!notCorrectRecognizedTypes.includes(strType)) {
-    return strType as RealTypeTypes;
+    return strType;
   }
   if (strType === 'Number') {
     return evaluateNumberType(subject, strType);
@@ -70,7 +73,7 @@ export const realType = (subject?: any): RealTypeTypes => {
     ].find((errType) => subject instanceof errType)?.name ||
       strType) as RealTypeTypes;
   }
-  return strType as RealTypeTypes;
+  return strType;
 };
 
 export type RealTypeTypes =
