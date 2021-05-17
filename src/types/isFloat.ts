@@ -1,7 +1,7 @@
 /**
  * Checks if is a floating point number
  *
- * @param num
+ * @param value - the value to test for being a float
  */
-export const isFloat = (num: any): boolean =>
-  Number.isFinite(num) && !Number.isInteger(num);
+export const isFloat = <T extends unknown>(value: T): boolean =>
+  Number.isFinite(value) && !Number.isInteger(value);

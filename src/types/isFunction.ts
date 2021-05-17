@@ -1,7 +1,7 @@
 /**
  * Checks if value is classified as a Function object.
  *
- * @param func
+ * @param func - the function or not
  */
-export const isFunction = (func?: any): boolean =>
-  func && typeof func === 'function';
+export const isFunction = <T extends unknown>(func?: T): boolean =>
+  Boolean(func) && typeof func === 'function';
