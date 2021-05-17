@@ -1,6 +1,7 @@
 /**
  * Checks if value is undefined.
  *
- * @param value
+ * @param subject - the subject
  */
-export const isUndefined = (value: any): boolean => value === undefined;
+export const isUndefined = <T extends unknown>(subject: T): boolean =>
+  subject === undefined;

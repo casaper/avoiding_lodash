@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>types/isBigInt | avoiding_lodash</title>
+	<title>types/isPresent | avoiding_lodash</title>
 	<meta name="description" content="Documentation for avoiding_lodash">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">avoiding_lodash</a>
 				</li>
 				<li>
-					<a href="types_isbigint.html">types/isBigInt</a>
+					<a href="types_ispresent.html">types/isPresent</a>
 				</li>
 			</ul>
-			<h1>Module types/isBigInt</h1>
+			<h1>Module types/isPresent</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,8 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="types_isbigint.html#isbigint" class="tsd-kind-icon">is<wbr>Big<wbr>Int</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="types_ispresent.html#isblank" class="tsd-kind-icon">is<wbr>Blank</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter"><a href="types_ispresent.html#ispresent" class="tsd-kind-icon">is<wbr>Present</a></li>
 							</ul>
 						</section>
 					</div>
@@ -81,22 +82,81 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-					<a name="isbigint" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Big<wbr>Int</h3>
+					<a name="isblank" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Blank</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Big<wbr>Int&lt;T&gt;<span class="tsd-signature-symbol">(</span>subject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Blank&lt;T&gt;<span class="tsd-signature-symbol">(</span>subject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/casaper/avoiding_lodash/blob/2ffba48/src/types/isBigInt.ts#L6">src/types/isBigInt.ts:6</a></li>
+									<li>Defined in src/types/isPresent.ts:48</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Checks if value is a BigInt.</p>
+									<p>Checks if subject is blank</p>
 								</div>
+								<p>Returns true if subject is:</p>
+								<ul>
+									<li><code>undefined</code></li>
+									<li><code>null</code></li>
+									<li><code>false</code></li>
+									<li>empty <code>string</code> - <code>&#39;&#39;</code></li>
+									<li>empty <code>array</code> - <code>[]</code></li>
+									<li>empty <code>Object</code> - <code>{}</code></li>
+									<li><code>0</code></li>
+									<li><code>NaN</code></li>
+								</ul>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>subject: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the subject</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="ispresent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> is<wbr>Present</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Present&lt;T&gt;<span class="tsd-signature-symbol">(</span>subject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/types/isPresent.ts:22</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if subject is not blank</p>
+								</div>
+								<p>Returns false if subject is:</p>
+								<ul>
+									<li><code>undefined</code></li>
+									<li><code>null</code></li>
+									<li><code>false</code></li>
+									<li>empty <code>string</code> - <code>&#39;&#39;</code></li>
+									<li>empty <code>array</code> - <code>[]</code></li>
+									<li>empty <code>Object</code> - <code>{}</code></li>
+									<li><code>0</code></li>
+									<li><code>NaN</code></li>
+								</ul>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
@@ -126,14 +186,17 @@
 						<a href="../modules.html">Modules</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="types_isbigint.html">types/is<wbr>Big<wbr>Int</a>
+						<a href="types_ispresent.html">types/is<wbr>Present</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="types_isbigint.html#isbigint" class="tsd-kind-icon">is<wbr>Big<wbr>Int</a>
+						<a href="types_ispresent.html#isblank" class="tsd-kind-icon">is<wbr>Blank</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="types_ispresent.html#ispresent" class="tsd-kind-icon">is<wbr>Present</a>
 					</li>
 				</ul>
 			</nav>

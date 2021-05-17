@@ -81,6 +81,7 @@
         "@typescript-eslint/unified-signatures": "error",
         "jsdoc/require-returns": "off",
         "jsdoc/require-param-type": "off",
+        "jsdoc/valid-types": "off",
         "tsdoc/syntax": "warn"
       },
       "env": {

@@ -1,7 +1,7 @@
 /**
- * Checks if value is classified as a String primitive or object.
+ * Checks if value is string
  *
- * @param str
+ * @param subject - the subject
  */
-export const isString = (str?: any): str is string =>
-  str && typeof str.valueOf() === 'string';
+export const isString = <T extends unknown>(subject: T): boolean =>
+  typeof subject === 'string';

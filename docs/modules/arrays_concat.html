@@ -90,19 +90,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/casaper/avoiding_lodash/blob/3468b7c/src/arrays/concat.ts#L13">src/arrays/concat.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/casaper/avoiding_lodash/blob/2ffba48/src/arrays/concat.ts#L15">src/arrays/concat.ts:15</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Creates a new <code>array</code> concatenating <code>array</code> with any additional <code>arrays</code> and/or values.</p>
 								</div>
+								<p>Use of this function mainly makes sense when used as part of a composed or piped function.</p>
 								<dl class="tsd-comment-tags">
-									<dt>description</dt>
-									<dd><p>Use of this function mainly makes sense when used as part of a composed or piped function.</p>
-									</dd>
 									<dt>example</dt>
 									<dd><pre><code class="language-ts"><span style="color: #795E26">concat</span><span style="color: #000000">([</span><span style="color: #098658">1</span><span style="color: #000000">], </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #098658">3</span><span style="color: #000000">); </span><span style="color: #008000">// =&gt; [1, 2, 3]</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">addVar</span><span style="color: #000000"> = [</span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #098658">3</span><span style="color: #000000">]</span>
+<span style="color: #795E26">concat</span><span style="color: #000000">([</span><span style="color: #098658">1</span><span style="color: #000000">], ...</span><span style="color: #001080">addVar</span><span style="color: #000000">); </span><span style="color: #008000">// =&gt; [1, 2, 3]</span>
 </code></pre>
 									</dd>
 								</dl>
@@ -123,6 +123,9 @@
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>elements: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>n elements to add to the array</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>

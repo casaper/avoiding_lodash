@@ -1,6 +1,7 @@
 /**
- * Checks if value is `null` or `undefined`
+ * Checks if subject is `null` or `undefined`
  *
- * @param value - the value to test for nil
+ * @param subject - the subject to test for nil
  */
-export const isNil = <T extends unknown>(value: T): boolean => value == null;
+export const isNil = <T extends unknown>(subject: T): boolean =>
+  subject == null;

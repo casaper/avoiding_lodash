@@ -1,7 +1,7 @@
 const notCorrectRecognizedTypes = ['Number', 'Object', 'Error'];
 
-export const evaluateNumberType = (
-  subject: any,
+export const evaluateNumberType = <T extends unknown>(
+  subject: T,
   strType: string
 ): RealTypeTypes => {
   if (Number.isNaN(subject)) {
@@ -27,7 +27,7 @@ export const evaluateNumberType = (
  *
  * For Example `typeof /^regex/` returns `'object'`. This will return `'regexp'`.
  *
- * @param subject
+ * @param subject - the subject
  * @example
  * ```ts
  * realType() // => 'Undefined'
@@ -51,7 +51,7 @@ export const evaluateNumberType = (
  * realType(new Promise((res, re) => res(''))) // => 'Promise'
  * ```
  */
-export const realType = (subject?: any): RealTypeTypes => {
+export const realType = <T extends unknown>(subject: T): RealTypeTypes => {
   const strType = Object.prototype.toString
     .call(subject)
     .slice(8, -1) as RealTypeTypes;

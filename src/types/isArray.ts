@@ -1,7 +1,7 @@
 /**
  * Checks if value is classified as an Array object.
  *
- * @param value - the subject
+ * @param subject - the subject
  * @example
  * ```ts
  * isArray([]) // => true
@@ -9,4 +9,5 @@
  * isArray() // => false
  * ```
  */
-export const isArray = (value: any): boolean => Array.isArray(value);
+export const isArray = <T extends unknown>(subject: T): boolean =>
+  Array.isArray(subject);

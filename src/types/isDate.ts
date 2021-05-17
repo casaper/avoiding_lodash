@@ -1,7 +1,7 @@
 /**
  * Checks if value is classified as a Date object.
  *
- * @param value
+ * @param subject - the subject
  */
-export const isDate = (value: any): boolean =>
-  value instanceof Date && !Number.isNaN(value);
+export const isDate = <T extends unknown>(subject: T): boolean =>
+  subject instanceof Date && !Number.isNaN(subject);

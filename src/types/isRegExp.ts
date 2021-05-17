@@ -1,6 +1,7 @@
 /**
- * Checks if value is classified as a RegExp object.
+ * Checks if subject is classified as a `RegExp` object.
  *
- * @param value
+ * @param subject - the subject
  */
-export const isRegExp = (value: any): boolean => value instanceof RegExp;
+export const isRegExp = <T extends unknown>(subject: T): boolean =>
+  subject instanceof RegExp;

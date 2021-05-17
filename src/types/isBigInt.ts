@@ -1,6 +1,7 @@
 /**
  * Checks if value is a BigInt.
  *
- * @param value
+ * @param subject - the subject
  */
-export const isBigInt = (value: any): boolean => typeof value === 'bigint';
+export const isBigInt = <T extends unknown>(subject: T): boolean =>
+  typeof subject === 'bigint';

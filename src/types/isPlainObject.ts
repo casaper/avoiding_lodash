@@ -1,7 +1,7 @@
 /**
  * Checks if value is dictionarry like object
  *
- * @param value
+ * @param subject - the subject
  */
-export const isPlainObject = (value: any): boolean =>
-  Object.prototype.toString.call(value) === '[object Object]';
+export const isPlainObject = <T extends unknown>(subject: T): boolean =>
+  Object.prototype.toString.call(subject) === '[object Object]';
